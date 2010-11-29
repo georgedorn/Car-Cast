@@ -421,7 +421,7 @@ public class ContentService extends Service implements OnCompletionListener {
 		return binder;
 	}
 
-	@Override
+//	@Override
 	public void onCompletion(MediaPlayer mp) {
 		cm().setCurrentPos(-1);
 		cm().save();

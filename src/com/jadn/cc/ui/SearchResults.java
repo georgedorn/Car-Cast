@@ -109,7 +109,7 @@ public class SearchResults extends BaseActivity {
 
 		listView.setOnItemClickListener(new OnItemClickListener() {
 
-			@Override
+//			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1,
 					int position, long arg3) {
 				add(position);

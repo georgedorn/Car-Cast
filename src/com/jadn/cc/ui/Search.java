@@ -61,7 +61,7 @@ public class Search extends BaseActivity {
 		final Button searchButton = (Button) findViewById(R.id.searchButton);
 		searchText.setOnEditorActionListener(new OnEditorActionListener(){
 
-			@Override
+//			@Override
 			public boolean onEditorAction(TextView v, int actionId,
 					KeyEvent event) {
 				searchButton.setEnabled(false);
@@ -76,7 +76,7 @@ public class Search extends BaseActivity {
 			}});
 		
 		searchButton.setOnClickListener(new OnClickListener() {
-			@Override
+//			@Override
 			public void onClick(View v) {
 				searchButton.setEnabled(false);
 				searchText.setEnabled(false);

@@ -92,7 +92,7 @@ public class PodcastList extends BaseActivity {
 
 		listView.setOnItemClickListener(new OnItemClickListener() {
 
-			@Override
+//			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
 				MetaHolder metaHolder = new MetaHolder();
 				try {
@@ -138,7 +138,7 @@ public class PodcastList extends BaseActivity {
 			new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Delete All?").setMessage(
 					"Do you really want to Delete all Downloaded Podcasts?").setPositiveButton("Confirm Delete All",
 					new DialogInterface.OnClickListener() {
-						@Override
+						//@Override
 						public void onClick(DialogInterface dialog, int which) {
 							try {
 								contentService.purgeAll();

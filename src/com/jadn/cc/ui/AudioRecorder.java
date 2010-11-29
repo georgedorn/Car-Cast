@@ -60,7 +60,7 @@ public class AudioRecorder extends BaseActivity {
 		setReadyToRecord(true);
 		
 		fb(R.id.audioRecorderRecordButton).setOnClickListener(new OnClickListener(){
-			@Override
+//			@Override
 			public void onClick(View v) {
 				Recording.record();
 				// transition to record mode
@@ -68,7 +68,7 @@ public class AudioRecorder extends BaseActivity {
 			}});
 
 		fb(R.id.audioRecorderCancelButton).setOnClickListener(new OnClickListener(){
-			@Override
+//			@Override
 			public void onClick(View v) {
 				Recording.cancel();
 				// transition back to ready
@@ -76,7 +76,7 @@ public class AudioRecorder extends BaseActivity {
 			}});
 		
 		fb(R.id.audioRecorderSaveButton).setOnClickListener(new OnClickListener(){
-			@Override
+//			@Override
 			public void onClick(View v) {
 				Recording.save();
 
@@ -89,7 +89,7 @@ public class AudioRecorder extends BaseActivity {
 		
 		listView.setOnItemClickListener(new OnItemClickListener() {
 
-			@Override
+//			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1,
 					int position, long arg3) {
 				Recording.getRecordings().get(position).play();

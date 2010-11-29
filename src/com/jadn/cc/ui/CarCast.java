@@ -109,7 +109,7 @@ public class CarCast extends BaseActivity {
 		progressBar.setProgress(0);
 		progressBar.setOnTouchListener(new OnTouchListener() {
 
-			@Override
+//			@Override
 			public boolean onTouch(View v, MotionEvent event) {
 				try {
 					contentService.moveTo(event.getX() / v.getWidth());
@@ -165,7 +165,7 @@ public class CarCast extends BaseActivity {
 		TextView textView = (TextView) findViewById(R.id.title);
 		textView.setOnTouchListener(new OnTouchListener() {
 
-			@Override
+//			@Override
 			public boolean onTouch(View v, MotionEvent event) {
 				if (event.getAction() != MotionEvent.ACTION_UP)
 					return true;

@@ -298,7 +298,7 @@ public class DownloadHelper implements Sayer {
 		}
 
 	}
-	@Override
+//	@Override
 	public void say(String text) {
 		sb.append(text);
 		sb.append('\n');

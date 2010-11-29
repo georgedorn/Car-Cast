@@ -13,54 +13,54 @@ public class ContentServiceStub extends IContentService.Stub {
 	ContentServiceStub(ContentService contentService) {
 		this.contentService = contentService;
 	}
-
-	@Override
+	
+//  @Override
 	public boolean addSubscription(Subscription toAdd) throws RemoteException {
 	    return contentService.addSubscription(toAdd);
 	}
 
-	@Override
+//	@Override
 	public void bump(int bump) throws RemoteException {
 		contentService.bump(bump);
 	}
 
-	@Override
+//	@Override
 	public int currentProgress() throws RemoteException {
 		return contentService.currentProgress();
 	}
 
-	@Override
+//	@Override
 	public void deleteAllSubscriptions() throws RemoteException {
 		contentService.deleteAllSubscriptions();
 
 	}
 
-	@Override
+//	@Override
 	public void deleteCurrentPodcast() throws RemoteException {
 		contentService.deleteCurrentPodcast();
 	}
 
-	@Override
+//	@Override
 	public void deletePodcast(int position) throws RemoteException {
 		contentService.deletePodcast(position);
 	}
 
-	@Override
+//	@Override
 	public void deleteSubscription(Subscription toDelete) throws RemoteException {
 	    contentService.deleteSubscription(toDelete);
 	}
 
-	@Override
+//	@Override
 	public void toggleSubscription(Subscription toToggle) throws RemoteException {
 		contentService.toggleSubscription(toToggle);
 	}
 
-	@Override
+//	@Override
 	public boolean editSubscription(Subscription original, Subscription modified) throws RemoteException {
 	    return contentService.editSubscription(original, modified);
 	}
 
-	@Override
+//	@Override
 	public String encodedDownloadStatus() throws RemoteException {
 		return contentService.encodedDownloadStatus();
 	}
@@ -76,22 +76,22 @@ public class ContentServiceStub extends IContentService.Stub {
 	// }
 
 
-	@Override
+//	@Override
 	public int getCount() throws RemoteException {
 		return contentService.getCount();
 	}
 
-	@Override
+//	@Override
 	public String getCurrentSubscriptionName() throws RemoteException {
 		return contentService.getCurrentSubscriptionName();
 	}
 
-	@Override
+//	@Override
 	public String getCurrentTitle() throws RemoteException {
 		return contentService.currentTitle();
 	}
 
-	@Override
+//	@Override
 	public String getDownloadProgress() throws RemoteException {
 		if ( contentService.downloadHelper == null ){
 			return "";
@@ -99,99 +99,99 @@ public class ContentServiceStub extends IContentService.Stub {
 		return contentService.downloadHelper.sb.toString();
 	}
 
-	@Override
+//	@Override
 	public String getDurationString() throws RemoteException {
 		return contentService.getDurationString();
 	}
 
-	@Override
+//	@Override
 	public String getLocationString() throws RemoteException {
 		return contentService.getLocationString();
 	}
 
-	@Override
+//	@Override
 	public String getMediaMode() throws RemoteException {
 		return contentService.getMediaMode().toString();
 	}
 
-	@Override
+//	@Override
 	public String getPodcastEmailSummary() throws RemoteException {
 		return contentService.getPodcastEmailSummary();
 	}
 
-	@Override
+//	@Override
     public List<Subscription> getSubscriptions() throws RemoteException {
        List<Subscription> subscriptions = contentService.getSubscriptions();
        return subscriptions;
     }
 
-	@Override
+//	@Override
 	public String getWhereString() throws RemoteException {
 		return contentService.getWhereString();
 	}
 
-	@Override
+//	@Override
 	public boolean isPlaying() throws RemoteException {
 		return contentService.mediaPlayer.isPlaying();
 	}
 
-	@Override
+//	@Override
 	public void moveTo(double d) throws RemoteException {
 		contentService.moveTo(d);
 	}
 
-	@Override
+//	@Override
 	public void next() throws RemoteException {
 		contentService.next();
 	}
 
-	@Override
+//	@Override
 	public void pause() throws RemoteException {
 		contentService.pauseNow();
 
 	}
 
-	@Override
+//	@Override
 	public boolean pauseOrPlay() throws RemoteException {
 		return contentService.pauseOrPlay();
 	}
 
-	@Override
+//	@Override
 	public void play(int position) throws RemoteException {
 		contentService.play(position);
 	}
 
-	@Override
+//	@Override
 	public void previous() throws RemoteException {
 		contentService.previous();
 	}
 
-	@Override
+//	@Override
 	public void purgeAll() throws RemoteException {
 		contentService.deleteUpTo(-1);
 	}
 
-	@Override
+//	@Override
 	public void purgeToCurrent() throws RemoteException {
 		contentService.deleteUpTo(contentService.currentPodcastInPlayer);
 	}
 
-	@Override
+//	@Override
 	public void resetToDemoSubscriptions() throws RemoteException {
 		contentService.resetToDemoSubscriptions();
 	}
 
-	@Override
+//	@Override
 	public void setCurrentPaused(int position) throws RemoteException {
 		contentService.setCurrentPaused(position);
 	}
 
-	@Override
+//	@Override
 	public void startDownloadingNewPodCasts(int max) throws RemoteException {
 		contentService.startDownloadingNewPodCasts(max);
 	}
 
-    @Override
+//    @Override
 	public String startSearch(String search) throws RemoteException {
 		return contentService.startSearch(search);
 	}

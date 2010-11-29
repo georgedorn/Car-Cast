@@ -44,7 +44,7 @@ public class TimePickerPreference extends DialogPreference implements TimePicker
 		return tp;
 	}
  
-	@Override
+//	@Override
 	public void onTimeChanged(TimePicker view, int hour, int minute) {
  
 		mHour = hour;

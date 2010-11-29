@@ -11,7 +11,7 @@ public class Bumper implements OnClickListener {
 		this.carCast = carCast;
 	}
 
-	@Override
+//	@Override
 	public void onClick(View v) {
 		try {
 			carCast.getContentService().bump(bump);

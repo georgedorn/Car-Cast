@@ -53,7 +53,7 @@ public class SubscriptionEdit extends BaseActivity {
 		((Button) findViewById(R.id.saveEditSite))
 				.setOnClickListener(new OnClickListener() {
 
-					@Override
+//					@Override
 					public void onClick(View v) {
 						String name = ((TextView) findViewById(R.id.editsite_name))
 								.getText().toString();
@@ -99,7 +99,7 @@ public class SubscriptionEdit extends BaseActivity {
 		((Button) findViewById(R.id.testEditSite))
 				.setOnClickListener(new OnClickListener() {
 
-					@Override
+//					@Override
 					public void onClick(View v) {
 
 						// String name = ((TextView)
@@ -113,7 +113,7 @@ public class SubscriptionEdit extends BaseActivity {
 						EnclosureHandler encloseureHandler = new EnclosureHandler(
 								Config.getMax(SubscriptionEdit.this), history,
 								new Sayer() {
-									@Override
+//									@Override
 									public void say(String text) {
 										Util.toast(SubscriptionEdit.this, text);
 									}

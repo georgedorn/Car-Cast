@@ -44,22 +44,22 @@ public class Subscription implements Parcelable, Comparable<Subscription> {
         this.enabled = enabled;
     }
 
-    @Override
+//    @Override
     public int compareTo(Subscription another) {
         return name.compareTo(another.name);
     }
 
-    @Override
+//    @Override
     public int describeContents() {
         return 0;
     }
 
-    @Override
+//    @Override
     public String toString() {
         return "Subscription: url=" + url + " ; name="+ name + "; max=" + maxDownloads + " ; ordering=" + orderingPreference + " ; enabled=" + enabled;
     }
 
-    @Override
+//    @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(name);
         dest.writeString(url);

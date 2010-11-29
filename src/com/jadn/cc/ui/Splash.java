@@ -18,7 +18,7 @@ public class Splash extends Activity {
           ImageView imageView = (ImageView)findViewById(R.id.splashscreen);
           imageView.setOnClickListener(new OnClickListener(){
 
-			@Override
+//			@Override
 			public void onClick(View v) {
 				finish();				
 			}});

@@ -190,7 +190,7 @@ public abstract class BaseActivity extends Activity implements ServiceConnection
 		}
 	}
 
-	@Override
+//	@Override
 	public void onServiceDisconnected(ComponentName name) {
 		// eventService = null;
 	}

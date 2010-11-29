@@ -111,7 +111,7 @@ public class Recording {
 		try {
 			final MediaPlayer mediaPlayer = new MediaPlayer();
 			mediaPlayer.setOnCompletionListener(new OnCompletionListener(){
-				@Override
+//				@Override
 				public void onCompletion(MediaPlayer mp) {
 					mediaPlayer.release();
 				}});

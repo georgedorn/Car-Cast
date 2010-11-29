@@ -11,7 +11,7 @@ public class BumpCast implements OnClickListener {
 		this.direction = direction;
 	}
 
-	@Override
+//	@Override
 	public void onClick(View v) {
 		try {
 			if (direction) {
