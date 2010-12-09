@@ -4,7 +4,7 @@
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry kind="lib" path="libs/admob-sdk-android.jar"/>
-	<classpathentry kind="lib" path="libs/framework.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/framework.jar"/>
 	<classpathentry kind="src" path=".apt_generated">
 		<attributes>
 			<attribute name="optional" value="true"/>
