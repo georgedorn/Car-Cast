@@ -8,12 +8,16 @@ import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.IBinder;
 import android.os.PowerManager;
+import android.os.RemoteException;
 import android.preference.PreferenceManager;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
@@ -453,6 +457,17 @@ public class ContentService extends Service implements OnCompletionListener {
 				}
 			}
 		};
+		
+		registerReceiver(new BroadcastReceiver(){
+			@Override
+			public void onReceive(Context context, Intent intent){
+				if (mediaPlayer.isPlaying()){
+					pauseNow();
+					wasPausedByPhoneCall = false;
+				}
+			}
+		}, new IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY));
+
 
 		final TelephonyManager telMgr = (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
 		telMgr.listen(phoneStateListener, PhoneStateListener.LISTEN_CALL_STATE);

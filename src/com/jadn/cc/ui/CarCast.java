@@ -100,24 +100,6 @@ public class CarCast extends BaseActivity {
 		startService(csIntent);
 		bindService(csIntent, this, Context.BIND_AUTO_CREATE);
 		
-		registerReceiver(new BroadcastReceiver(){
-			@Override
-			public void onReceive(Context context, Intent intent){
-				if (intent != null && intent.getExtras().getInt("state") == 0){
-						try {
-							if (contentService.isPlaying()){
-								contentService.pause();
-								contentService.bump(-2);
-								updatePausePlay();
-								updateUI();
-							}
-						} catch (RemoteException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-				}
-			}
-		}, new IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY));
 		
 		setTitle(getAppTitle());
 
